@@ -37,10 +37,10 @@ class SecurityPanel extends RingSocketDevice {
 
     publishState(data) {
         const isPublish = data === undefined ? true : false
-        if (isPublish) {
+        //if (isPublish) {
             // Eventually remove this but for now this attempts to delete the old light component based volume control from Home Assistant
-            this.mqttPublish(`homeassistant/switch/${this.locationId}/${this.deviceId}_bypass/config`, '', false)
-        }
+            //this.mqttPublish(`homeassistant/switch/${this.locationId}/${this.deviceId}_bypass/config`, '', false)
+        //}
 
         let alarmMode
         const alarmInfo = this.device.data.alarmInfo ? this.device.data.alarmInfo : []

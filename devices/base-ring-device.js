@@ -153,7 +153,7 @@ class RingDevice {
             const configTopic = `${utils.config.ring_topic}/${entity.component}/${this.locationId}/${this.deviceId}_${entityKey}/config`
             this.debug(`HASS config topic: ${configTopic}`, 'disc')
             this.debug(discoveryMessage, 'disc')
-            this.mqttPublish(configTopic, JSON.stringify(discoveryMessage), false)
+            //this.mqttPublish(configTopic, JSON.stringify(discoveryMessage), false)
 
             // On first publish store generated topics in entities object and subscribe to command topics
             if (!this.entity[entityKey].hasOwnProperty('published')) {
