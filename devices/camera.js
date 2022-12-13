@@ -610,7 +610,7 @@ class Camera extends RingPolledDevice {
 
         if (newSnapshot) {
             this.debug('Successfully retrieved updated snapshot')
-            this.data.snapshot.currentImage = newSnapshot
+            this.data.snapshot.currentImage = newSnapshot.toString('base64')
             this.data.snapshot.timestamp = Math.round(Date.now()/1000)
             this.publishSnapshot()
         }
