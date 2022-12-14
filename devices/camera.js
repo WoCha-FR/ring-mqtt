@@ -583,6 +583,8 @@ class Camera extends RingPolledDevice {
 
         if (this.device.snapshotsAreBlocked) {
             this.debug('Snapshots are unavailable, check if motion capture is disabled manually or via modes settings')
+            this.data.snapshot.currentImage = "disabled"
+            this.publishSnapshot()
             return
         }
 
