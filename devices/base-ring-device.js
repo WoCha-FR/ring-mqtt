@@ -150,7 +150,7 @@ export default class RingDevice {
                 device: this.deviceData
             }
 
-            const configTopic = `${utils.config.ring_topic}/config/${this.deviceId}/${entity.component}/${entityKey}`
+            const configTopic = `${utils.config().ring_topic}/config/${this.deviceId}/${entity.component}/${entityKey}`
             this.debug(`Jeedom config topic: ${configTopic}`, 'disc')
             this.debug(discoveryMessage, 'disc')
             this.mqttPublish(configTopic, JSON.stringify(discoveryMessage), false)
