@@ -159,8 +159,8 @@ export default class RingDevice {
                 device: this.deviceData
             }
 
-            const configTopic = `homeassistant/${entity.component}/${this.locationId}/${this.deviceId}_${entityKey}/config`
-            this.debug(`HASS config topic: ${configTopic}`, 'disc')
+            const configTopic = `${utils.config().ring_topic}/config/${this.deviceId}/${entity.component}/${entityKey}`
+            this.debug(`Jeedom config topic: ${configTopic}`, 'disc')
             this.debug(discoveryMessage, 'disc')
             this.mqttPublish(configTopic, JSON.stringify(discoveryMessage), false)
 
