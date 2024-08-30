@@ -52,18 +52,18 @@ input[type=submit]:hover {
 </head>
 <body>
 
-<h2>Acquire Refresh Token</h2>
+<h2>Acquérir un jeton de rafraîchissement</h2>
 <h3 id="systemId"></h3>
-Please enter your Ring account information below and the 2FA code on the following page to generate the refresh token required for this application to access the Ring API.<br>
+Saisissez les informations de votre compte Ring ci-dessous et le code 2FA sur la page suivante pour générer le jeton de rafraîchissement requis pour que cette application puisse accéder à l'API Ring.<br>
 <p style="background-color:red" id="errormsg"></p>
-<h3>Login</h3>
+<h3>Identifiants RING</h3>
 <div class="container">
   <form action="./submit-account" method="post">
     <label for="email">Email</label>
     <input type="text" id="email" name="email">
-    <label for="password">Password</label>
+    <label for="password">Mot de Passe</label>
     <input type="password" id="password" name="password">
-    <input type="checkbox" onclick="showPassword()">Show Password
+    <input type="checkbox" onclick="showPassword()">Afficher mot de passe
     <br><br>
     <input type="submit" value="Submit">
   </form>
@@ -85,7 +85,7 @@ Please enter your Ring account information below and the 2FA code on the followi
     document.getElementById("errormsg").innerHTML = getCookie('error')
   }
   if (getCookie('systemId')) {
-    document.getElementById("systemId").innerHTML = `Device Name: <span style='color:chartreuse'> ${getCookie('systemId')}</span>`
+    document.getElementById("systemId").innerHTML = `Nom appareil: <span style='color:chartreuse'> ${getCookie('systemId')}</span>`
   }
 </script>
 </body>
