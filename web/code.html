@@ -41,7 +41,7 @@ input[type=submit]:hover {
 </head>
 <body>
 
-<h2>Enter 2FA Code</h2>
+<h2>Saisir le code 2FA</h2>
 <h3 id="systemId"></h3>
 <p style="background-color:Red;" id="errormsg"></p></br>
 <div class="container">
@@ -60,7 +60,7 @@ input[type=submit]:hover {
     document.getElementById("errormsg").innerHTML = getCookie('error')
   }
   if (getCookie('systemId')) {
-    document.getElementById("systemId").innerHTML = `Device Name: <span style='color:chartreuse'> ${getCookie('systemId')}</span>`
+    document.getElementById("systemId").innerHTML = `Nom appareil: <span style='color:chartreuse'> ${getCookie('systemId')}</span>`
   }
 </script>
 </body>
