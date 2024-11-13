@@ -7,7 +7,7 @@
     "enable_cameras": true,
     "enable_modes": false,
     "enable_panic": false,
-    "hass_topic": "homeassistant/status",
+    "hass_topic": "ring/jeedom",
     "ring_topic": "ring",
     "location_ids": []
 }
