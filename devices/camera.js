@@ -744,6 +744,8 @@ export default class Camera extends RingPolledDevice {
 
         if (this.device.snapshotsAreBlocked) {
             this.debug('Snapshots are unavailable, check if motion capture is disabled manually or via modes settings')
+            this.data.snapshot.currentImage = "disabled"
+            this.publishSnapshot()
             return
         }
 
@@ -783,7 +785,7 @@ export default class Camera extends RingPolledDevice {
 
         if (newSnapshot) {
             this.debug(`Successfully retrieved updated ${type} snapshot`)
-            this.data.snapshot.cache = newSnapshot
+            this.data.snapshot.cache = newSnapshot.toString('base64')
             this.data.snapshot.cacheType = type
             this.data.snapshot.timestamp = Math.round(Date.now()/1000)
             this.publishSnapshot()
