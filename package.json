@@ -10,21 +10,21 @@
     "body-parser": "^1.20.3",
     "chalk": "^5.4.1",
     "date-fns": "^4.1.0",
-    "debug": "^4.4.0",
+    "debug": "^4.4.1",
     "express": "^4.21.2",
     "is-online": "^11.0.0",
     "js-yaml": "^4.1.0",
     "minimist": "^1.2.8",
-    "mqtt": "^5.13.0",
-    "ring-client-api": "^14.0.0-beta.2",
+    "mqtt": "^5.13.1",
+    "ring-client-api": "^14.0.1",
     "rxjs": "^7.8.2",
     "werift": "^0.22.1",
     "write-file-atomic": "^6.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
-    "eslint": "^9.16.0",
-    "globals": "^15.13.0"
+    "eslint": "^9.28.0",
+    "globals": "^15.15.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
